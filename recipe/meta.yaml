@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -30,9 +30,13 @@ test:
   imports:
     - dvc_azure
   requires:
+    - git
     - pip
+    - portalocker >=1.6,<2.0 # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
   commands:
     - pip check
+    - dvc version
+    - dvc version | grep azure
 
 about:
   home: https://github.com/iterative/dvc-azure
