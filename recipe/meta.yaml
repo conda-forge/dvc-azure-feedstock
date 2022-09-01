@@ -1,5 +1,5 @@
 {% set name = "dvc-azure" %}
-{% set version = "2.19.0" %}
+{% set version = "2.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 51a38e08394e9e1509a664c1e7f4616b2748912f534e631089ebe6593a44776b
+  sha256: b2c5c1d47232dee7b1bd035af92b1e82ea91a75a6c15b3c9864ac067b67a5a6a
 
 build:
   noarch: python
