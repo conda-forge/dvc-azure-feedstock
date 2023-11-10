@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - dvc
-    - adlfs >=2021.10.0
+    - adlfs >=2023.10.0
     - azure-identity >=1.4.0
     - knack
 
